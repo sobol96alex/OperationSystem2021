@@ -1,10 +1,7 @@
 Chickadee OS
 ============
 
-This is Chickadee, a teaching operating system built for Harvard’s
-[CS 161].
-
-Quickstart: `make run` or `make run-PROGRAM`
+Быстрй старт с помощью команд: `make run` или `make run-PROGRAM`
 
 Make targets
 ------------
@@ -29,7 +26,7 @@ default is `alloc`.
 
 `make HALT=1 run-PROGRAM` should make QEMU exit once all processes are done.
 
-Troubleshooting
+Решение проблем при запуске
 ---------------
 
 There are several ways to kill a recalcitrant QEMU (for instance, if your
@@ -66,21 +63,21 @@ If you experience runtime errors involving `obj/libqemu-nograb.so.1`, put
 `QEMU_PRELOAD_LIBRARY=` in `config.mk`. This disables a shim we use that
 prevents QEMU from grabbing the mouse.
 
-Source files
+Исходные файлы
 ------------
 
-### Common files
+### Общие файлы
 
-| File            | Description                  |
-| --------------- | ---------------------------- |
-| `types.h`       | Type definitions             |
-| `lib.hh/cc`     | C library                    |
-| `x86-64.h`      | x86-64 hardware definitions  |
-| `elf.h`         | ELF64 structures             |
+| Файл            | Описание                               |
+| --------------- | -------------------------------------- |
+| `types.h`       | Определение типов                      |
+| `lib.hh/cc`     | Библиотека С                           |
+| `x86-64.h`      | x86-64 определение аппаратных средств  |
+| `elf.h`         | ELF64 структура                        |
 
 ### Boot loader
 
-| File            | Description                  |
+| Файл            | Описание                     |
 | --------------- | ---------------------------- |
 | `bootentry.S`   | Boot loader entry point      |
 | `boot.cc`       | Boot loader main code        |
@@ -88,7 +85,7 @@ Source files
 
 ### Kernel core
 
-| File                | Description                          |
+| Файл                | Описание                             |
 | ------------------- | ------------------------------------ |
 | `kernel.hh`         | Kernel declarations                  |
 | `k-exception.S`     | Kernel entry points                  |
@@ -103,7 +100,7 @@ Source files
 
 ### Kernel libraries
 
-| File                | Description                          |
+| Файл                | Описание                             |
 | ------------------- | ------------------------------------ |
 | `k-memrange.hh`     | Memory range type tracker            |
 | `k-hardware.cc`     | General hardware access              |
@@ -115,7 +112,7 @@ Source files
 
 ### Processes
 
-| File              | Description                                      |
+| Файл              | Описание                                         |
 | ----------------- | ------------------------------------------------ |
 | `u-lib.cc/hh`     | Process library and system call implementations  |
 | `p-allocator.cc`  | Allocator process                                |
@@ -123,7 +120,7 @@ Source files
 
 ### File system
 
-| File                  | Description                                      |
+| Файл                  | Описание                                         |
 | --------------------- | ------------------------------------------------ |
 | `chickadeefs.hh`      | Defines chkfs (ChickadeeFS) layout               |
 | `journalreplayer.cc`  | Logic for replaying chkfs journals               |
@@ -136,7 +133,7 @@ The main output of the build process is a disk image,
 could conceivably boot on real hardware! The build process also
 produces other files that can be useful to examine.
 
-| File                       | Description                          |
+| Файл                       | Описание                             |
 | -------------------------- | ------------------------------------ |
 | `obj/kernel.asm`           | Kernel assembly (with addresses)     |
 | `obj/kernel.sym`           | Kernel defined symbols               |
