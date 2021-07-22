@@ -3,13 +3,12 @@ Chickadee OS
 
 Быстрй старт с помощью команд: `make run` или `make run-PROGRAM`
 
-Make targets
+Определенные виды запуска
 ------------
 
-`make NCPU=N run` will run the OS with `N` virtual CPUs (default is 2). Close
-the QEMU window, or type `q` inside it, to exit the OS.
+`make NCPU=N run` если хотите запустить ОС с `N` виртуальными процессорами (по умолчанию их 2]). Для того чтобы выйти из ОС, закройте окно QEMU или нажмите `q`.
 
-`make run-console` will run the OS in the console window.
+`make run-console` если хотите запустить ОС в окне консоли.
 
 `make SAN=1 run` to run with sanitizers enabled.
 
